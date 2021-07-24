@@ -9,9 +9,10 @@ on:
     paths: [ 'packages/home-spa/**' ]
 
 
-#defaults:
-#  run:
-#    working-directory: one-platform
+defaults:
+  run:
+    shell: bash
+    working-directory: packages
 
 jobs:
   printJob:
@@ -44,4 +45,5 @@ jobs:
           echo "GITHUB_ACTION_PATH: ${GITHUB_ACTION_PATH}"
           cd ${GITHUB_WORKSPACE} && ls -l
           echo .* *
+        contex
         #working-directory: one-platform
