@@ -32,5 +32,5 @@ jobs:
           CUSTOM_ENV: ""
         #working-directory: ./packages/home-spa
         run: |
-          echo "${GITHUB_ACTION_PATH}"
+          echo "${env.GITHUB_ACTION_PATH}"
         #working-directory: one-platform
