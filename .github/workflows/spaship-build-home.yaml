@@ -8,6 +8,11 @@ on:
       - 'release'
     paths: [ 'packages/home-spa/**' ]
 
+
+defaults:
+  run:
+    working-directory: one-platform
+
 jobs:
   printJob:
     name: Print event
@@ -28,4 +33,4 @@ jobs:
         #working-directory: ./packages/home-spa
         run: |
           pwd
-        working-directory: one-platform
+        #working-directory: one-platform
