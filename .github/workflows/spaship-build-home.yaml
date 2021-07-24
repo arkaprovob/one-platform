@@ -28,4 +28,4 @@ jobs:
         #working-directory: ./packages/home-spa
         run: |
           pwd
-        working-directory: ./one-platform
+        working-directory: one-platform
