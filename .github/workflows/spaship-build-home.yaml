@@ -27,5 +27,5 @@ jobs:
           CUSTOM_ENV: "Hi"
         #working-directory: ./packages/home-spa
         run: |
-          npm install && npm build
+          pwd
         working-directory: ./packages/home-spa
