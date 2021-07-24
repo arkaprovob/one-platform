@@ -29,8 +29,8 @@ jobs:
     steps:
       - name: build
         env:
-          CUSTOM_ENV: "Hi"
+          CUSTOM_ENV: $GITHUB_ACTION_PATH
         #working-directory: ./packages/home-spa
         run: |
-          echo "$GITHUB_ACTION_PATH"
+          echo "$CUSTOM_ENV"
         #working-directory: one-platform
