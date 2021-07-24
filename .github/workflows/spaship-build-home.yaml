@@ -25,6 +25,6 @@ jobs:
       - name: build
         env:
           CUSTOM_ENV: "Hi"
-        working-directory: /packages/home-spa
+        working-directory: ./packages/home-spa
         run: |
-          npm install && npm build
+          ls -R
