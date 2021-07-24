@@ -42,5 +42,5 @@ jobs:
           echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REF: ${GITHUB_REF}"
           echo "GITHUB_ACTION_PATH: ${GITHUB_ACTION_PATH}"
-
+          echo "${GITHUB_WORKSPACE}/packages/home-spa"
         #working-directory: one-platform
