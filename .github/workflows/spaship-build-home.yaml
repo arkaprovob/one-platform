@@ -1,0 +1,29 @@
+name: Build Home SPA
+on:
+  pull_request:
+    types: [opened, closed, reopened]
+  push:
+    branches:
+      - 'master'
+      - 'release'
+    paths: [ 'packages/home-spa/**' ]
+
+jobs:
+  printJob:
+    name: Print event
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+  buildJob:
+    name: build Deployable
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        env:
+          CUSTOM_ENV: "Hi"
+        run: |
+          npm install && npm build
