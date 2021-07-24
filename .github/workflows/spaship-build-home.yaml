@@ -9,9 +9,9 @@ on:
     paths: [ 'packages/home-spa/**' ]
 
 
-defaults:
-  run:
-    working-directory: one-platform
+#defaults:
+#  run:
+#    working-directory: one-platform
 
 jobs:
   printJob:
@@ -32,5 +32,5 @@ jobs:
           CUSTOM_ENV: "Hi"
         #working-directory: ./packages/home-spa
         run: |
-          pwd
+          echo "$GITHUB_ACTION_PATH"
         #working-directory: one-platform
