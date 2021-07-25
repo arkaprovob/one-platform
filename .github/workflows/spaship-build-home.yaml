@@ -52,4 +52,5 @@ jobs:
         #working-directory: ./packages/home-spa
         run: |
           echo .* *
+          npm install && npm build
         working-directory: ./packages/home-spa
