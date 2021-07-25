@@ -29,10 +29,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: build
+      - name: print git default env variable
         env:
           CUSTOM_ENV: ""
-        #working-directory: ./packages/home-spa
         run: |
           echo "Home: ${HOME}"
           echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
@@ -46,4 +45,11 @@ jobs:
           echo "GITHUB_ACTION_PATH: ${GITHUB_ACTION_PATH}"
           cd ${GITHUB_WORKSPACE} && ls -l
           echo .* *
-        #working-directory: one-platform
+
+      - name: build
+        env:
+          CUSTOM_ENV: ""
+        #working-directory: ./packages/home-spa
+        run: |
+          echo .* *
+        working-directory: /packages/home-spa
