@@ -9,11 +9,6 @@ on:
     paths: [ 'packages/home-spa/**' ]
 
 
-defaults:
-  run:
-    shell: bash
-    working-directory: packages
-
 jobs:
   printJob:
     name: Print event
@@ -24,6 +19,7 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           echo "$GITHUB_CONTEXT"
+
   buildJob:
     name: build Deployable
     runs-on: ubuntu-latest
