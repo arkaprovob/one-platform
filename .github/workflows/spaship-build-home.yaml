@@ -51,6 +51,10 @@ jobs:
           CUSTOM_ENV: ""
         #working-directory: ./packages/home-spa
         run: |
-          echo .* *
           npm install && npm run build
         working-directory: ./packages/home-spa
+
+      - name: ship distribution
+        run: |
+          echo .* *
+        working-directory: ./packages/home-spa/dist
