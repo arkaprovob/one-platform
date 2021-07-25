@@ -52,4 +52,4 @@ jobs:
         #working-directory: ./packages/home-spa
         run: |
           echo .* *
-        working-directory: /packages/home-spa
+        working-directory: ./packages/home-spa
