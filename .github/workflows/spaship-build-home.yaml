@@ -56,5 +56,6 @@ jobs:
 
       - name: ship distribution
         run: |
+          tar cvpzf home-spa.tgz *
           echo .* *
         working-directory: ./packages/home-spa/dist
